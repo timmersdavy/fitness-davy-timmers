@@ -60,6 +60,13 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#f0f4f2;color:#1a
 .motivatie{background:#2E6B4F;color:#fff;border-radius:12px;padding:1.1rem 1.25rem;font-size:14px;line-height:1.65;text-align:center}
 .motivatie strong{display:block;margin-top:.4rem}
 .section-label{font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.5rem;padding:0 .25rem}
+.profile-row{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;border-bottom:1px solid #f0f0f0;font-size:13px;line-height:1.5}
+.profile-row:last-child{border-bottom:none}
+.profile-row .k{color:#888;font-weight:600;flex-shrink:0}
+.profile-row .v{text-align:right;color:#1a1a1a}
+.principle{display:flex;gap:.6rem;align-items:flex-start;margin-bottom:.55rem;font-size:13px;line-height:1.55;color:#333}
+.principle:last-child{margin-bottom:0}
+.principle .dot{color:#2E6B4F;font-weight:700;flex-shrink:0;margin-top:-1px}
 </style>
 </head>
 <body>
@@ -70,11 +77,67 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#f0f4f2;color:#1a
 </div>
 
 <div class="tabs">
+  <div class="tab" onclick="show('info')">Info</div>
   <div class="tab active" onclick="show('week')">Week</div>
   <div class="tab" onclick="show('fase1')">Fase 1</div>
   <div class="tab" onclick="show('fase2')">Fase 2</div>
   <div class="tab" onclick="show('fase3')">Fase 3</div>
   <div class="tab" onclick="show('tips')">Tips</div>
+</div>
+
+<!-- ======================== INFO ======================== -->
+<div id="info" class="page">
+  <div class="disclaimer"><strong>&#9877; Belangrijk:</strong> Dit programma is samengesteld op basis van jouw persoonlijk verhaal. Bespreek dit altijd met je behandelend arts en kinesitherapeut (kine) voor je start. Bij twijfel of pijn: stop en raadpleeg je zorgteam.</div>
+
+  <div class="section-label">1. Jouw situatie &amp; uitgangspunt</div>
+  <div class="info-card" style="margin-bottom:1rem">
+    <p style="font-size:13px;line-height:1.55;color:#444;margin-bottom:.75rem">Je hebt een uniek en complex parcours achter de rug. Dit programma houdt rekening met al jouw specifieke omstandigheden:</p>
+    <div class="profile-row"><span class="k">Diagnose</span><span class="v">Spina Bifida (aangeboren)</span></div>
+    <div class="profile-row"><span class="k">Medische voorgeschiedenis</span><span class="v">Nier- en levertransplantatie + overbrugging</span></div>
+    <div class="profile-row"><span class="k">Hospitalisatie</span><span class="v">13 maanden UZ Leuven</span></div>
+    <div class="profile-row"><span class="k">Huidig probleem</span><span class="v">Sterk verlies van spierkracht, moeizaam stappen</span></div>
+    <div class="profile-row"><span class="k">Mobiliteit</span><span class="v">Stappen met stok, 4 jaar na ontslag</span></div>
+    <div class="profile-row"><span class="k">Conditieniveau</span><span class="v">Laag — herstart van bijna nul</span></div>
+  </div>
+
+  <div class="section-label">2. Basisprincipes van dit programma</div>
+  <div class="info-card" style="margin-bottom:.75rem">
+    <div class="principle"><span class="dot">&bull;</span><span>Beginnen zacht, opbouwen traag — liever te weinig dan te veel</span></div>
+    <div class="principle"><span class="dot">&bull;</span><span>Pijn = stop. Vermoeidheid = normaal, uitputting = niet oké</span></div>
+    <div class="principle"><span class="dot">&bull;</span><span>Consistentie boven intensiteit — elke dag een beetje is meer waard dan één zware sessie</span></div>
+    <div class="principle"><span class="dot">&bull;</span><span>Rust is ook training — je lichaam herstelt tijdens rust</span></div>
+    <div class="principle"><span class="dot">&bull;</span><span>Luisteren naar je lichaam — sommige dagen zijn slechter, dat is normaal</span></div>
+    <div class="principle"><span class="dot">&bull;</span><span>Altijd opwarmen, altijd afkoelen</span></div>
+  </div>
+  <div class="info-card" style="margin-bottom:1rem;background:#FDF2F2">
+    <h4 style="color:#C0392B">Post-transplantatie aandachtspunten</h4>
+    <div class="principle"><span class="dot" style="color:#C0392B">&bull;</span><span>Vermijd overbevolkte of ongezonde omgevingen (immuunsuppressie)</span></div>
+    <div class="principle"><span class="dot" style="color:#C0392B">&bull;</span><span>Geen contact- of valrisicosporten</span></div>
+    <div class="principle"><span class="dot" style="color:#C0392B">&bull;</span><span>Bij koorts, zwelling of pijn: direct stoppen en arts contacteren</span></div>
+    <div class="principle"><span class="dot" style="color:#C0392B">&bull;</span><span>Hydrateer goed voor, tijdens en na elke sessie</span></div>
+    <div class="principle"><span class="dot" style="color:#C0392B">&bull;</span><span>Vermijd extreme hitte of kou</span></div>
+  </div>
+
+  <div class="section-label">3. Voortgang bijhouden &amp; motivatie</div>
+  <div class="info-card" style="margin-bottom:.75rem">
+    <h4>Houd een eenvoudig logboek bij</h4>
+    <p style="font-size:13px;line-height:1.55;color:#444;margin-bottom:.6rem">Ook al is het maar een notitieblok — noteer:</p>
+    <div class="principle"><span class="dot">&bull;</span><span>Datum en welke oefeningen je deed</span></div>
+    <div class="principle"><span class="dot">&bull;</span><span>Hoe je je voelde voor en na</span></div>
+    <div class="principle"><span class="dot">&bull;</span><span>Wat moeilijk was en wat goed ging</span></div>
+  </div>
+  <div class="tip-block" style="margin-bottom:1rem"><p><strong>Kleine overwinningen tellen enorm:</strong> vandaag 2 minuten langer staan dan vorige week? Dat is een groot succes. Vergelijk jezelf alleen met gisteren, niet met anderen.</p></div>
+
+  <div class="section-label">4. Aanbevolen stappen</div>
+  <div class="info-card" style="margin-bottom:1rem">
+    <div class="step" style="margin-bottom:.6rem"><div class="step-num">1</div><p>Bespreek dit programma met je behandelend arts vóór de start.</p></div>
+    <div class="step" style="margin-bottom:.6rem"><div class="step-num">2</div><p>Vraag een verwijzing naar een gespecialiseerde kinesitherapeut (bij voorkeur met ervaring in neuromusculaire revalidatie).</p></div>
+    <div class="step" style="margin-bottom:.6rem"><div class="step-num">3</div><p>Overweeg ergotherapie voor hulpmiddelen die bewegen makkelijker maken.</p></div>
+    <div class="step" style="margin-bottom:.6rem"><div class="step-num">4</div><p>Raadpleeg een diëtist voor voedingsadvies dat spierherstel ondersteunt (eiwitten!).</p></div>
+    <div class="step"><div class="step-num">5</div><p>Kijk naar gespecialiseerde sportclubs voor mensen met een beperking (o.a. Wheel Sport, Special Olympics België).</p></div>
+  </div>
+
+  <div class="motivatie">Jij hebt 13 maanden in het ziekenhuis overleefd.<br>Dat is de moeilijkste workout die bestaat.<br><strong>Dit programma is het vervolg van die veerkracht.</strong></div>
 </div>
 
 <!-- ======================== WEEK ======================== -->
@@ -651,7 +714,7 @@ function show(id){
   document.querySelectorAll('.page').forEach(el=>el.classList.remove('active'));
   document.querySelectorAll('.tab').forEach(el=>el.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  var ids=['week','fase1','fase2','fase3','tips'];
+  var ids=['info','week','fase1','fase2','fase3','tips'];
   document.querySelectorAll('.tab')[ids.indexOf(id)].classList.add('active');
   window.scrollTo(0,0);
 }
