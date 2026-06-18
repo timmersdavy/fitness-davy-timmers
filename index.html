@@ -925,5 +925,9 @@ document.querySelectorAll('.card').forEach(function(card){
   card.appendChild(btn);
 });
 </script>
+<script>
+  // Onzichtbare bezoekersteller
+  fetch('https://wk2026-belgie.netlify.app/.netlify/functions/bezoekers?site=fitness&tel=1').catch(function(){});
+</script>
 </body>
 </html>
